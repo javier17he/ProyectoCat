@@ -1,7 +1,11 @@
 {% extends "inicio.html" %}
 
 {% block parrafo %}
+<ol>
+{% for cliente in nombre%}
 
-{{nombre}}
+    <li>{{Cliente.nombre%}}</li>
 
+{%end for %}
+</ol>
 {% endblock %}

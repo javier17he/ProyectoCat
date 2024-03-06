@@ -54,6 +54,6 @@ def buscar_cliente(request):
 def resultado_busqueda(request):
     cliente = request.get("Nombre Cliente")
 
-    nombre = Cliente.object.filter(nombre_iexcat=cliente)
+    nombre = Cliente.object.filter(nombre_icontains=cliente)
 
     return render(request, "AppCat/resultadoBusqueda.html", {"nombre":nombre})
