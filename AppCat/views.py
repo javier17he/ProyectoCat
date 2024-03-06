@@ -4,7 +4,7 @@ from AppCat.models import *
 
 
 def inicio(request):
-     return render(request,"inicio.html")
+     return render(request,"AppCat/inicio.html")
 
 def agregar_Cliente(request):
     if request.method =="POST":
@@ -17,7 +17,7 @@ def agregar_Cliente(request):
     else:
         formulario = ClienteForm()
     
-    return render(request, "nuevo_cliente.html",{"form":formulario})
+    return render(request, "AppCat/nuevo_cliente.html",{"form":formulario})
     
 
 def agregar_presupuesto(request):
@@ -31,7 +31,7 @@ def agregar_presupuesto(request):
     else:
         formulario = presupuestoForm()
     
-    return render(request, "crear_presupuesto.html",{"form":formulario})
+    return render(request, "AppCat/crear_presupuesto.html",{"form":formulario})
 
 def agregar_compra(request):
     if request.method =="POST":
@@ -44,4 +44,9 @@ def agregar_compra(request):
     else:
         formulario = CompraForm()
     
-    return render(request, "nueva_compra.html",{"form":formulario})
+    return render(request, "AppCat/nueva_compra.html",{"form":formulario})
+
+
+def buscar_cliente(request):
+
+    return render(request,"AppCat/buscar_cliente.html")
