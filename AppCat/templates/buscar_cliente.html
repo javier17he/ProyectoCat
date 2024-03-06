@@ -1,5 +1,11 @@
-<form action="" method="get">
+{% extends "inicio.html" %}
+
+{% block parrafo %}
+<form action="/AppCat/resultadoBusqueda/" method="get">
     
    Ingrese el cliente a buscar: <input type="text" name="cliente">
+   <input type="submit" value="Buscar" >
 
 </form>
+
+{% endblock %}

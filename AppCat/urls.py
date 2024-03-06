@@ -6,5 +6,6 @@ urlpatterns = [
     path("nueva_compra",agregar_compra),
     path("crear_presupuesto",agregar_presupuesto),
     path("buscar_cliente", buscar_cliente)
+    path("resultadoClu",resultadoBusqueda),
     path("",inicio, name="Home"),
  ]

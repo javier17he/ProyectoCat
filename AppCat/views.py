@@ -50,3 +50,10 @@ def agregar_compra(request):
 def buscar_cliente(request):
 
     return render(request,"AppCat/buscar_cliente.html")
+
+def resultado_busqueda(request):
+    cliente = request.get("Nombre Cliente")
+
+    nombre = Cliente.object.filter(nombre_iexcat=cliente)
+
+    return render(request, "AppCat/resultadoBusqueda.html", {"nombre":nombre})
