@@ -245,5 +245,5 @@ class presupuestoBorrar(DeleteView):
     success_url = "/AppCat/"
 
 class CambiarContra(LoginRequiredMixin, PasswordChangeView):
-    template_name = "cambiar_contra.html"
+    template_name = "registro/cambiar_contra.html"
     success_url = "/AppCat/"

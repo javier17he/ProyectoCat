@@ -30,3 +30,17 @@ class EditarClienteForm(UserChangeForm):
 
 class AvatarFormulario(forms.Form):
     imagen = forms.ImageField()
+class RegistroUsuario(UserCreationForm):
+
+    class Meta:
+        model = User
+        fields = ["username", "first_name", "last_name",  "email", "password1", "password2"]
+
+
+class EditarUsuario(UserChangeForm):
+
+    password = None
+
+    class Meta:
+        model = User
+        fields = ["first_name", "last_name",  "email"]

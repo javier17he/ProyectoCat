@@ -25,8 +25,21 @@
                 <a class="navbar-brand" href="crear_presupuesto.html">Presupuesto</a>
                 <a class="navbar-brand" href="nueva_compra.html">Compra</a>
                 <a class="navbar-brand" href="buscar_cliente.html">Buscar Cliente</a>
-
+                {% if user.is_authenticated %}
+                <a href="{% url 'Editar Usuario' %}">Hola {{user.first_name}} {{user.last_name}} - Editar  datos acá</a>
+                {% if user.avatar_set.last %}
+                <img src="{{user.avatar_set.last.imagen.url}}" width="70px" height="50px" alt="Foto del avatar del usuario activo.">
+                {% else %}
+                <img src="{% static 'AppCoder/assets/img/avatar-defecto.jpg' %}" width="70px" height="50px" alt="">
+                
+                {% endif %}
+                <a href="{% url 'Agregar Avatar' %}">Cambiar Avatar Imagen</a>
+                <a href="{% url 'Cambiar Contraseña' %}">Cambiar contra</a>
+                <a class="btn btn-primary" href="{% url 'Cerrar Sesion' %}">Cerrar Sesion</a>
+                {% else %}
                 <a class="btn btn-primary" href="#signup">Registrarse</a>
+                <a class="btn btn-primary" href="{% url 'Iniciar Sesion' %}">Iniciar Sesion</a>
+                {% endif %}
             </div>
         </nav>
         <!-- Masthead-->
@@ -47,8 +60,7 @@
         </header>
         {% block parrafo %}
 
-        {% endblock %}
-          
+        {% endblock %}         
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">
