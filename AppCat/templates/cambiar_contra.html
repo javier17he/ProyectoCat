@@ -1,0 +1,12 @@
+{% extends "inicio.html" %}
+
+{% block titulo %}
+<form action="" method="POST"> {% csrf_token %}
+
+    {{form}}
+    
+    <button type="submit"> Cambiar Contraseña </button>
+    
+    </form>
+    
+{% endblock %}

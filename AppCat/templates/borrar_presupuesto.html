@@ -1,0 +1,13 @@
+{% extends "inicio.html" %}
+
+{% block parrafo %}
+
+<form action="" method="post"> {% csrf_token %}
+
+<p>¿Quiere eliminar el presupuesto: {{object}}? </p>
+
+<input type="submit" value="Eliminar">
+
+</form>
+
+{% endblock %}
