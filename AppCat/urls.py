@@ -20,13 +20,6 @@ urlpatterns = [
     path("ver_compra",ver_compra),
     path("ver_cliente",ver_cliente),
     path("ver_presupuesto",ver_presupuesto),
-    path("ver_cliente",ver_cliente),
-    path("ver_cliente",ver_cliente),
-    path("ver_cliente",ver_cliente),
-    path("ver_cliente",ver_cliente),
-    path("ver_cliente",ver_cliente),
-    path("ver_cliente",ver_cliente),
-
     
     path("lista_compras/", CompraLista.as_view()),
     path("nuevo_presupuesto/", presupuesto.as_view()),
